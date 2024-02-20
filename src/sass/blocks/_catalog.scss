@@ -1,0 +1,172 @@
+.catalog {
+    margin-bottom: 83px;
+    &__tabs {
+        display: flex;
+        margin-top: 53px;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding:0;
+        margin-bottom: 0;
+    }
+    &__tab {
+        
+        margin: 0 5px;
+        width: 222px;
+        height: 52px;
+        border:2px solid #d0d0d0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #6b6b6b;
+        transform: skewX(-25deg);
+        cursor: pointer;
+        &:hover {
+            box-shadow:2px 2px 20px red;
+            border:none;
+        }
+       
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+            color: white;
+            background-color:$main-color;
+            border:none;
+        }          
+    }
+    &__content {
+        display: flex;
+        margin-top: 59px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-item {
+        width: 303px;
+        min-height: 442px;
+        border:2px solid #e8e8e8;
+        padding: 20px 20px 26px 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        
+        img {
+            max-width: 100%;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+
+        }
+        &__subtitle {
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            color: #0d0d0d;
+        }
+        &__descr {
+            margin-top: 17px;
+            font-weight: 300;
+            font-size: 14px;
+            text-align: center;
+            color: #0d0d0d;
+        }
+        &__link {
+            display: block;
+            margin-top: 17px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            text-decoration: underline;  
+            text-align: center;
+            color: $main-color;
+            &:hover {
+                color:red;
+            }
+        }
+        hr {
+            margin-top: 19px;
+            margin-bottom: 21px;
+        }
+        &__footer {
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+        }
+        &__old-price {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 100%;
+            text-decoration: line-through;
+            color: #555;
+        }
+        &__newprice {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 100%;
+            color: #050505;
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content {
+            width: 50%;
+            margin-right:0;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__turnover {
+            position: relative;
+            width: 50%;
+            margin-left:20px;
+            transform: translateX(0);
+            padding-right: 20px;
+            transition: 0.5s all;
+            list-style-type: none;
+            padding-left: 19px;
+            margin-bottom: 0;
+            &_active {
+                margin-left: 0;
+                transform: translateX(-100%);              
+            }
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                color: #555;
+                line-height: 150%;
+                margin-bottom: 20px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    top: 8px;
+                    left: -14px;
+                    background-color:$main-color;
+                }
+            }
+            a {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(calc(-50% - 15px));
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 100%;               
+                text-align: center;
+                color: $main-color;
+                text-transform: uppercase;
+                &:hover {
+                    color:red;
+                }    
+            } 
+        }
+    }
+}
