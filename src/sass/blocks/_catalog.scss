@@ -38,10 +38,13 @@
         }          
     }
     &__content {
-        display: flex;
+        display: none;
         margin-top: 59px;
         flex-wrap: wrap;
         justify-content: space-between;
+        &_active {
+            display: flex;
+        }
     }
     &-item {
         width: 303px;
