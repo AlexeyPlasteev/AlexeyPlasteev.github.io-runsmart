@@ -82,11 +82,11 @@
             <div class="consultation__text">Просто заполните форму заявки <br>
                  и мы перезвоним вам в течении 10 минут
             </div>
-            <form class="callback" action="#">
-                    <input required placeholder="Ваше имя" type="text"> 
-                    <input required placeholder="Ваш телефон" type="number"> 
-                    <input required placeholder="Ваш E-mail" type="email">
-                    <!-- <input type="submit" value="заказать консультацию">   -->
+            <form id="consultation-form" class="feed-form" action="#">
+                    <input  name="name"  placeholder="Ваше имя" type="text"> 
+                    <input name="phone"  placeholder="Ваш телефон" > 
+                    <input name="email"  placeholder="Ваш E-mail" type="email">
+                    
                     <button class="button button_submit">заказать консультацию</button>           
             </form>
 
@@ -428,14 +428,14 @@
         </div>
     </footer>
     <section class="overlay">
-        <div class="modal" id="consultation">
+        <div class="modal" id="consultation"  >
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
-            <form class="callback callback_mt25" action="#">
-                <input required placeholder="Ваше имя" type="text"> 
-                <input required placeholder="Ваш телефон" type="number"> 
-                <input required placeholder="Ваш E-mail" type="email">
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" placeholder="Ваше имя" type="text"> 
+                <input name="phone" placeholder="Ваш телефон" > 
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 <!-- <input type="submit" value="заказать консультацию">   -->
                 <button class="button button_submit">заказать консультацию</button>           
             </form>
@@ -444,10 +444,10 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
-            <form class="callback callback_mt25" action="#">
-                <input required placeholder="Ваше имя" type="text"> 
-                <input required placeholder="Ваш телефон" type="number"> 
-                <input required placeholder="Ваш E-mail" type="email">
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" placeholder="Ваше имя" type="text"> 
+                <input name="phone" placeholder="Ваш телефон"> 
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 <!-- <input type="submit" value="заказать консультацию">   -->
                 <button class="button button_submit">КУПИТЬ</button>           
             </form>
@@ -464,6 +464,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 
     
