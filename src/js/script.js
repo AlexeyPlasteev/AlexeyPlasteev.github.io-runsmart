@@ -6,7 +6,7 @@ const slider = tns({
     controls: false,
     nav: false
   });
-
+  new WOW().init();
   document.querySelector('.prev').addEventListener('click', function () {
     slider.goTo('prev');
   });
@@ -102,6 +102,27 @@ const slider = tns({
       });
       return false;
     });
+
+    //scroll and pageup
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1600) {
+          $('.pageup').fadeIn();
+      } else {
+          $('.pageup').fadeOut();
+      }
+    });
+
+    $('a[href=#up]').on('click', function() {
+
+      let href = $(this).attr('href');
+  
+      $('html, body').animate({
+          scrollTop: $(href).offset().top
+      });
+      return false;
+  });
+  
   })(jQuery);
     
 

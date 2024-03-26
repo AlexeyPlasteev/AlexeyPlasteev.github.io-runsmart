@@ -7,6 +7,9 @@
         margin-top: 60px;
         justify-content: space-between;
     }
+    &__subheader {
+        margin-top: 5px;
+    }
     &__icon {
         text-align: center;
         margin-top: 30px;
@@ -38,6 +41,14 @@
                 color:#9900fff6;
                 text-decoration: none;
             }
+        }
+    }
+    &__img {
+        &_animated {
+            animation: heartbeat 2s ease infinite;
+        }
+        &:hover {
+            animation-play-state: paused;
         }
     }  
    
